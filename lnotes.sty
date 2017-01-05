@@ -33,6 +33,7 @@ body={390pt,530pt},marginparsep=10pt,marginpar=50pt]{geometry}
 \usepackage{colortbl}                  % 单元格加背景
 \usepackage{listings}
 \usepackage{tabularx}
+\usepackage{titletoc}
 
 %% 颜色定义
 % 参考 http://tool.oschina.net/commons?type=3
@@ -131,8 +132,12 @@ body={390pt,530pt},marginparsep=10pt,marginpar=50pt]{geometry}
 
 \newcommand{\fmyurl}[1]{\urlfont \url{#1}}
 %%%%%%%%%%%%
-
-
+\renewcommand{\contentsname}{目~~~~录}
+\renewcommand\listfigurename{插\ 图\ 目\ 录}
+\renewcommand\listtablename{表\ 格\ 目\ 录}
+\renewcommand\bibname{参\ 考\ 文\ 献}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
 
 %%%%%%%%%%
 \lstdefinestyle{custom}{
@@ -238,6 +243,14 @@ leftmargin=40pt]}{\end{enumerate}}
     }{%
     \vskip 21bp    
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titlecontents{chapter}[0pt]{\vspace{-0.25\baselineskip}\heiti\zihao{4}}{\thecontentslabel\ }{}
+        {\hspace{.5em}\titlerule*[4pt]{$\cdot$}{\zihao{-4}\contentspage}}[\vspace{0.07\baselineskip}]
+\titlecontents{section}[2em]{\kai\zihao{-4}}{\thecontentslabel\ }{}
+        {\hspace{.5em}\titlerule*[4pt]{$\cdot$}{\zihao{-4}\contentspage}}[\vspace{0.1\baselineskip}]
+\titlecontents{subsection}[4em]{\vspace{-0.2\baselineskip}\fsong\zihao{5}}{\thecontentslabel\ }{}
+        {\hspace{.5em}\titlerule*[4pt]{$\cdot$}{\zihao{-4}\contentspage}}[\vspace{0.1\baselineskip}]
 
 \makeindex
 
