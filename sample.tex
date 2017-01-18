@@ -374,4 +374,28 @@
   \item item4   
 \end{ol}
 
+%算法
+\begin{algorithm}
+\caption{A}
+\label{alg:A}
+\begin{algorithmic}
+\IF {$i\geq maxval$}
+    \STATE $i\gets 0$
+\ELSE
+    \IF {$i+k\leq maxval$}
+        \STATE $i\gets i+k$
+    \ENDIF
+\ENDIF
+
+\FOR{$i \le n$} 
+  \STATE $s \gets $i+1 
+\ENDFOR
+
+\WHILE{$i \le n$}
+  \STATE $s \gets $i+1 
+\ENDWHILE
+
+\end{algorithmic}
+\end{algorithm}
+
 \end{document}
