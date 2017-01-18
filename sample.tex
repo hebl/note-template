@@ -23,6 +23,7 @@
 \end{cabstract}
 
 \tableofcontents
+\listofalgorithms
 \pagenumbering{roman}
 \setcounter{page}{1}
 \newpage
@@ -375,27 +376,23 @@
 \end{ol}
 
 %算法
-\begin{algorithm}
-\caption{A}
-\label{alg:A}
-\begin{algorithmic}
-\IF {$i\geq maxval$}
-    \STATE $i\gets 0$
-\ELSE
-    \IF {$i+k\leq maxval$}
-        \STATE $i\gets i+k$
-    \ENDIF
-\ENDIF
-
-\FOR{$i \le n$} 
-  \STATE $s \gets $i+1 
-\ENDFOR
-
-\WHILE{$i \le n$}
-  \STATE $s \gets $i+1 
-\ENDWHILE
-
-\end{algorithmic}
+\begin{algorithm}[H]
+\caption{二分法求根}
+\label{alg:binsection}
+\it{给定初始区间}$[a, b]$ \it{使得} $f(a)f(b) < 0$
+\BlankLine
+\While{$(b-a)/2 > tol$}{
+    $c = (a+b)/2$ \;
+    \If{$f(c) = 0$}{
+        stop, end \;
+    }
+    \eIf{$f(a)f(c) < 0$}{
+        $b = c$ \;
+    }{
+        $a = c$ \;
+    }
+}
+\KwRet{$(a+b)/2$}
 \end{algorithm}
 
 \end{document}

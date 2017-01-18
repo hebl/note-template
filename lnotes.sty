@@ -34,9 +34,7 @@ body={390pt,530pt},marginparsep=10pt,marginpar=50pt]{geometry}
 \usepackage{listings}
 \usepackage{tabularx}
 \usepackage{titletoc}
-\usepackage{algorithmic}
-\usepackage[chapter]{algorithm}
-
+\usepackage[algochapter,algoruled]{algorithm2e}
 
 
 %% 颜色定义
@@ -143,11 +141,10 @@ body={390pt,530pt},marginparsep=10pt,marginpar=50pt]{geometry}
 \renewcommand{\figurename}{图}
 \renewcommand{\tablename}{表}
 
-% Include chapter number in algorithm number
-\renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}}
-\makeatletter
-\renewcommand*{\ALG@name}{算法}
-\makeatother
+\SetAlgorithmName{算~~法}{算法参考}{算~~~~法}
+\DontPrintSemicolon
+\SetAlgoInsideSkip{smallskip}
+
 
 %%%%%%%%%%
 \lstdefinestyle{custom}{
